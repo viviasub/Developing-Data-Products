@@ -1,0 +1,30 @@
+---
+title: "Leafleat Map"
+author: "by Antonio Vivi"
+date: '`r paste("First created on Gen 31, 2019. Updated on", Sys.Date())`'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE)
+```
+
+## Siena Map - "Campo Square"
+```{r}
+library(leaflet)
+Icon <- makeIcon(iconUrl = "1.jpg",iconWidth = 80, iconHeight = 80)
+wiki <- paste(sep = "<br/>", "<b><a href='https://en.wikipedia.org/wiki/Piazza_del_Campo'>Campo Square</a></b>")
+
+my_map <- leaflet() %>% addTiles() %>% setView(lat=43.31845, lng=11.33162, zoom = 100)
+my_map <- my_map %>% addPopups(lat=43.31845, lng=11.33162, wiki,options = popupOptions(closeButton = FALSE))
+my_map <- my_map %>% addMarkers(lat=43.31845, lng=11.33162,icon=Icon)
+
+my_map
+```
+
+
+
+
+
+                
+)
