@@ -21,10 +21,3 @@ my_map <- my_map %>% addMarkers(lat=43.31845, lng=11.33162,icon=Icon)
 
 my_map
 ```
-
-
-
-
-
-                
-)
